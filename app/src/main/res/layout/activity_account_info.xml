@@ -143,6 +143,18 @@
                 android:textStyle="bold"
                 android:textSize="22sp"
                 android:background="@drawable/button_outline"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:textColor="#FF0000"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:background="@drawable/button_outline"/>
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
