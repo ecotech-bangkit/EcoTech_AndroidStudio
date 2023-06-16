@@ -43,7 +43,6 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.textLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
-            finish()
         }
     }
 
@@ -56,6 +55,7 @@ class RegisterActivity : AppCompatActivity() {
             if (registerResponse != null) {
                 Toast.makeText(this, "Register success", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, LoginActivity::class.java))
+                finish()
             }
         }
 

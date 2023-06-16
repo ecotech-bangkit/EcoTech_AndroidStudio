@@ -12,16 +12,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/appBar"
-        android:fitsSystemWindows="true"
         app:elevation="0dp">
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             app:navigationIcon="@drawable/ic_arrow_left"
             app:title="Informasi Akun"
             app:titleTextColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:menu="@menu/option_menu"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -54,12 +54,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center_vertical">
+
                 <TextView
+                    android:id="@+id/tv_nama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nama"
-                    android:textSize="24sp"
-                    android:textColor="@color/textColorPrimaryInverse"/>
+                    android:textColor="@color/textColorPrimaryInverse"
+                    android:textSize="24sp" />
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
@@ -142,18 +144,6 @@
                 android:layout_marginTop="50dp"
                 android:textStyle="bold"
                 android:textSize="22sp"
-                android:background="@drawable/button_outline"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Logout"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="10dp"
-                android:textColor="#FF0000"
-                android:layout_marginTop="50dp"
-                android:textStyle="bold"
-                android:textSize="18sp"
                 android:background="@drawable/button_outline"/>
         </LinearLayout>
 

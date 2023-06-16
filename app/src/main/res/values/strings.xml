@@ -34,4 +34,6 @@
     <string name="email">Email</string>
     <string name="password_login">Password</string>
     <string name="belum_punya_akun">Belum punya akun?</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

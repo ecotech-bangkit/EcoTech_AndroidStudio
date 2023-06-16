@@ -1,10 +1,13 @@
 package com.irhamsoetomo.ecotech.activities
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.irhamsoetomo.ecotech.R
 import com.irhamsoetomo.ecotech.databinding.ActivityResultBinding
+import java.io.File
+import java.net.URI
 
 class ResultActivity : AppCompatActivity() {
 
@@ -15,8 +18,21 @@ class ResultActivity : AppCompatActivity() {
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnLokasi.setOnClickListener {
-            startActivity(Intent(Intent(this, LocationActivity::class.java)))
+        val prediction = intent.getStringExtra(EXTRA_PREDICT)
+
+
+        if (prediction == "This is an e-waste, you can send it to the collector!") {
+            binding.tvHasil.text = "Bisa Didaur Ulang"
+            binding.tvPerintah.text = "Sampah bisa didaur ulang. Silahkan berikan ke pengepulan terdekat"
+            binding.btnLokasi.setOnClickListener {
+                startActivity(Intent(Intent(this, MapsActivity::class.java)))
+            }
+        } else {
+            binding.ivTrue.setImageResource(R.drawable.close)
+            binding.btnLokasi.text = "Kembali"
+            binding.btnLokasi.setOnClickListener {
+                finish()
+            }
         }
 
         setSupportActionBar(binding.toolbar)
@@ -27,5 +43,10 @@ class ResultActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    companion object {
+        const val EXTRA_PREDICT = "extra_predict"
+        const val EXTRA_URI = "extra_uri"
     }
 }

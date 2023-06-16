@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -37,43 +36,35 @@
             android:paddingVertical="40dp"
             android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/result_Image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:backgroundTint="@color/colorContainer"
-            android:background="@drawable/background_points"
-            android:adjustViewBounds="true"
-            android:src="@drawable/ic_image"
-            app:tint="#454545" />
+            <ImageView
+                android:id="@+id/iv_true"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/centang" />
 
-        <ImageView
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/centang"/>
+            <TextView
+                android:id="@+id/tv_hasil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="Tidak Bisa Didaur Ulang"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_gravity="center"
-            android:textColor="@color/textColorPrimary"
-            android:textStyle="bold"
-            android:text="Bisa Didaur Ulang"
-            android:textSize="24sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textColor="@color/textColorPrimary"
-            android:text="Sampah bisa didaur ulang. Lihat lokasi pengepulan sampahnya!"
-            android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/tv_perintah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:text="Sampah tidak bisa didaur ulang. Silahkan pisahkan sampahnya!"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="18sp" />
 
         <Button
             android:layout_width="wrap_content"

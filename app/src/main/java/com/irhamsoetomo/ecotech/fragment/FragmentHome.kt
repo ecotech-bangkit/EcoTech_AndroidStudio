@@ -39,5 +39,10 @@ class FragmentHome : Fragment() {
 
         binding.tvGreetings.text = "Hello $email!"
 
+        binding.settings.setOnClickListener {
+            val intent = Intent(requireActivity(), AccountInfoActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

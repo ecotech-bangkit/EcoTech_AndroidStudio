@@ -30,8 +30,7 @@ class LoginActivity : AppCompatActivity() {
             authViewModel.loginUser(loginRequestBody)
         }
 
-        binding.toRegisterPageBtn.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+        binding.textRegister.setOnClickListener {
             finish()
         }
 
@@ -60,6 +59,7 @@ class LoginActivity : AppCompatActivity() {
 
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         }
 
